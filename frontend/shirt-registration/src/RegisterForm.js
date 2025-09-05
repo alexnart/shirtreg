@@ -18,7 +18,7 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/register", formData);
+      await axios.post("https://shirt-registration-backend.onrender.com", formData);
       setMessage("✅ Registration successful!");
       setFormData({ name: "", email: "", location: "", shirtSize: "" });
     } catch (error) {
