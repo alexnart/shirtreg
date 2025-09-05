@@ -7,7 +7,7 @@ const AdminPanel = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get("https://shirt-registration-backend.onrender.com");
+      const res = await axios.get("https://shirt-registration-backend.onrender.com/api/registrations");
       setRegistrations(res.data);
     };
     fetchData();
