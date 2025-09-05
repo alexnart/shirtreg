@@ -18,12 +18,12 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://shirt-registration-backend.onrender.com", formData);
+      await axios.post("https://shirt-registration-backend.onrender.com/api/register", formData);
       setMessage("✅ Registration successful!");
       setFormData({ name: "", email: "", location: "", shirtSize: "" });
     } catch (error) {
       setMessage("❌ Error registering!");
-    }
+    }/
   };
 
   return (
